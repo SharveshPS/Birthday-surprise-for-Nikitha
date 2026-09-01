@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikitha's B'day Surprise ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- ADD THE LINE RIGHT HERE INSIDE THE HEAD TAG -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/drag-drop-touch/1.3.1/DragDropTouch.js"></script>
+</head>
+<body>
+
+    <!-- Loading -->
+    <div id="loading">
+        <h1 class="neon-text">Initializing Birthday Surprise...</h1>
+        <p>Loading all my love for Nikitha...</p>
+        <div class="loading-bar"><div class="progress" id="progress1"></div></div>
+    </div>
+
+    <div id="main" style="display: none;">
+        <div class="shimmer-bg"></div>
+
+        <!-- Chapter 1: Story + Countdown -->
+        <div id="chapter1">
+            <!-- Story Messages -->
+            <div id="story-section">
+                <div id="message1" class="story-message active">Hello Nikitha 🌸<br>Please stay with me...</div>
+                <div id="message2" class="story-message">Tonight isn't just another night...</div>
+                <div id="message3" class="story-message">One last countdown...</div>
+            </div>
+
+            <!-- Countdown -->
+            <div id="countdown-page" class="countdown-page">
+                <div class="date-display" id="date-display">02 September</div>
+                <div class="timer-display" id="timer-display">
+                    <span id="hours">00</span>:<span id="minutes">05</span>:<span id="seconds">00</span>
+                </div>
+                <div class="subtitle" id="dynamic-subtitle">Every second brings us closer together...</div>
+            </div>
+
+            <!-- Celebration -->
+            <div id="celebration" class="celebration-screen" style="display: none;">
+                <h1 class="neon-text">Happy Birthday Nikitha ❤️</h1>
+                <p class="birthday-wish">Today isn't special because it's September 3rd.<br>It's special because it's your Birthday 🥳.</p>
+                <button onclick="showVerification()" class="begin-btn">Begin Journey →</button>
+            </div>
+        </div>
+
+        <!-- Verification Gate (Middle Page) -->
+        <div id="verification-gate" style="display: none;">
+            <div class="verification-container">
+                <h2 class="neon-text">Security Check by Your EE Engineer ❤️</h2>
+                <p class="verify-subtitle">
+                    This is what an Electrical & Electronics Engineer does for her CS with AI Girl Friend —<br>
+                    building a personalized surprise for his brilliant CS-AI girl on her special day.
+                </p>
+                <p>Enter your BF's name to unlock next Chapter :</p>
+                <input type="text" id="nameInput" placeholder="Enter your BF's Name" autocomplete="off">
+                <button onclick="verifyBoyfriend()">Unlock the Surprise ❤️</button>
+                <p id="verifyMessage" class="verify-msg"></p>
+            </div>
+        </div>
+
+        <!-- Chapter 2: Why Today Matters -->
+        <div id="chapter2" style="display: none;">
+            <h1 class="neon-text chapter-title">Chapter 2: Why Today Matters</h1>
+            <div class="chapter-content">
+                <div class="grateful-note">
+                    <p>My dearest Nikitha,</p>
+                    <p>Today is soo special coz my Bujuk bujuk baby turns 21  🥳and i’m very happy that she’s celebrating her 21st B’day as a committed one with me😊.</p>
+                    <p>I want to wish you a good health and a happy life on this special day✨. I will pray for your future endeavours💫.</p>
+                    <p>You’re the spl person I've met in my lyf, and this is a small surprise B’day gift from ur Bf . Juz ignore if u find any mistakes/glitches in the animations or transitions.. As an EE student I’ve tried my best to do this😁.</p>
+                    <p>I want us to be together until life takes us 💞, and you will always be my fav memory.. I luv u soo much babyy 😘.</p>
+                    <p class="signature">Forever yours</p> 
+                    <p class="signature">With Love,<br>Sharvesh ❤️</p>
+                </div>
+            </div>
+            <div class="chapter-nav-buttons">
+                <button onclick="showChapter(1)" class="begin-btn prev-btn">✨ Before our story began...</button>
+                <button onclick="showChapter(3)" class="begin-btn">Continue to Chapter 3 →</button>
+            </div>
+        </div>
+
+        <!-- Chapter 3: Things I Love About You -->
+        <div id="chapter3" style="display: none;">
+            <h1 class="neon-text chapter-title">Chapter 3: Things I Love About You</h1>
+            
+            <div class="cards-container">
+                <!-- Card 1 -->
+                <div class="love-card" onclick="revealCard(this)" data-revealed="false">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <span class="card-number">01</span>
+                            <h3>Tap to Reveal ❤️</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>First thing i admired from you was ur character.. you are soo soft hearted person, you wouldn’t hurt others even when ur hurt by them, coz you think of them and their suffering though ur suffering in silence. But I’m exactly opposite of that.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="love-card" onclick="revealCard(this)" data-revealed="false">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <span class="card-number">02</span>
+                            <h3>Tap to Reveal ❤️</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>Next, you're soo genuine and loving, and the caring you showed on me when we were frnds, and those little details and attention u give on me and you used to check on me whether I’m okiee, had my dinner etc made me feel comfortable and loving with you, coz u were the one who cared for me truly while others doesn’t even care about me.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="love-card" onclick="revealCard(this)" data-revealed="false">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <span class="card-number">03</span>
+                            <h3>Tap to Reveal ❤️</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>Finally, I love your dedication and the hardwork you put on your studies, always you do your best and sometimes I saw you helping Sanjivan with his Courseworks & Exam Preparation. You make the people around you to grow and score good marks, I mean the helping tendency whole-heartedly….</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chapter-nav-buttons">
+                <button onclick="showChapter(2)" class="begin-btn prev-btn">💫 Back to why today matters...</button>
+                <button onclick="showChapter(4)" class="begin-btn">Continue to Chapter 4 →</button>
+            </div>
+        </div>
+
+        <!-- Chapter 4: Did You Know? -->
+        <div id="chapter4" style="display: none;">
+            <h1 class="neon-text chapter-title">Chapter 4: Did You Know?</h1>
+            <p class="chapter-subtitle">Fun facts about the girl who stole my heart ❤️</p>
+            
+            <div class="facts-container" id="facts-container">
+                <!-- Facts will be loaded by JS -->
+            </div>
+            <div class="chapter-nav-buttons">
+                <button onclick="showChapter(3)" class="begin-btn prev-btn">💖 Return to what I love...</button>
+                <button onclick="showChapter(5)" class="begin-btn">Continue to Chapter 5 →</button>
+            </div>
+        </div>
+
+        <!-- Chapter 5: Love Games -->
+        <div id="chapter5" style="display: none;">
+            <h1 class="neon-text chapter-title">Chapter 5: Love Games ❤️</h1>
+            <p class="chapter-subtitle">A little playful journey made just for you</p>
+
+            <!-- LOVE POINTS DISPLAY -->
+            <div id="love-points-display" style="text-align:center; margin: 12px 0 25px; font-size: 1.25rem; color: #ff99cc;">
+                ❤️ Love Points: <span id="love-points-value">0</span>
+            </div>
+
+            <!-- Game 1 -->
+            <div id="game1" class="game-screen">
+                <h2 class="game-title">Game 1: Complete My Sentence</h2>
+                <p class="game-progress" id="game1-progress">Question 1 of 10</p>
+                <p class="game-question" id="game1-question">Loading question...</p>
+                <div class="options" id="game1-options"></div>
+                <button class="begin-btn" id="game1-reveal-btn" onclick="revealGame1Answer()" style="display:none; margin-top:25px;">Reveal My Truth ❤️</button>
+                <div id="game1-result" class="game-result" style="display:none;"></div>
+                <button class="begin-btn" id="game1-next-btn" onclick="nextGame1Question()" style="display:none; margin-top:20px;">Next Question →</button>
+            </div>
+
+            <!-- Game 2 -->
+            <div id="game2" class="game-screen" style="display:none;">
+                <h2 class="game-title">Game 2: Our Love Story ❤️</h2>
+                <p class="game-instruction">These are our scattered memories.<br>Drag them into the timeline below in any order you feel is right.</p>
+                <div class="timeline-dropzone" id="timeline-dropzone">
+                    <p class="drop-hint" id="drop-hint">Drop your memories here...</p>
+                </div>
+                <div class="timeline-items" id="timeline-items"></div>
+                <button class="begin-btn" id="story-btn" onclick="playOurStory()" style="margin-top:30px; display:none;">Our Story ❤️</button>
+                <div id="game2-result" class="game-result" style="display:none;"></div>
+            </div>
+
+            <!-- Game 3 -->
+            <div id="game3" class="game-screen" style="display:none;">
+                <h2 class="game-title">Game 3: Catch My Hearts ❤️</h2>
+                <p class="game-instruction">Click my heart and collect as many hearts as you can in 60 seconds!</p>
+                <div class="heart-catcher" id="heart-catcher">
+                    <div class="score-board">Hearts Collected: <span id="heart-score">0</span></div>
+                    <div class="timer-board">Time Left: <span id="heart-timer">60</span>s</div>
+                </div>
+                <button class="begin-btn" id="start-catch-btn" onclick="startHeartCatch()">Start Catching</button>
+                <div id="game3-result" class="game-result" style="display:none;"></div>
+            </div>
+
+            <!-- Game 4 -->
+            <div id="game4" class="game-screen" style="display:none;">
+                <h2 class="game-title">Game 4: Build My Heart</h2>
+                <p class="game-instruction">Drag-and-drop to swap pieces</p>
+                <div class="puzzle-container" id="puzzle-container"></div>
+                <button class="begin-btn" id="complete-puzzle-btn" onclick="completePuzzle()" 
+                        style="margin-top:28px; display:none; opacity:0; transition: opacity 0.8s ease;">
+                    Complete My Heart ❤️
+                </button>
+                <div id="game4-result" class="game-result" style="display:none;"></div>
+            </div>
+            <div class="chapter-nav-buttons" style="margin-top: 30px;">
+                <button onclick="showChapter(4)" class="begin-btn prev-btn">🌸 Back to fun facts...</button>
+            </div>
+        </div> <!-- end of chapter5 -->
+
+    </div> <!-- end of #main -->
+
+    <!-- ========== LOVE COMPILER / FINAL RESULTS ========== -->
+    <div id="love-compiler" style="display: none;">
+        <div class="compiler-container">
+            <h1 class="neon-text compiler-title">The Love Compiler</h1>
+            <div id="compiler-output" class="compiler-output"></div>
+            <div id="compiler-continue" style="display:none; margin-top:30px;">
+                <p class="continue-question">Would you like to continue?</p>
+                <button class="begin-btn" onclick="showFinalScores()">YES ❤️</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final Scores Screen -->
+    <div id="final-scores" style="display: none;">
+        <div class="scores-container">
+            <h1 class="neon-text">Your Love Score Report</h1>
+            <div id="scores-breakdown"></div>
+            <div class="total-score">
+                Total Love Points: <span id="final-total-points">0</span> ❤️
+            </div>
+            <p class="congrats-message" id="congrats-message"></p>
+            <button class="begin-btn" style="margin-top:30px;" onclick="showLoveLetter()">
+                Continue to Our Memories →
+            </button>
+        </div>
+    </div>
+
+<!-- ========== LOVE LETTER ========== -->
+<div id="love-letter" style="display: none;">
+    <div class="letter-bg"></div>
+
+    <div class="envelope-wrapper" id="envelope-wrapper">
+        <div class="envelope" id="envelope" onclick="openEnvelope()">
+            <div class="envelope-flap"></div>
+            <div class="envelope-body">
+                <div class="envelope-heart">❤️</div>
+                <div class="for-my-love">For My Dearest Nikitha ❤️</div>
+                <div class="tap-text">✨ Tap to open your letter ✨</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Letter appears smoothly after opening -->
+    <div class="letter-card" id="letter-card">
+        <div class="letter-content" id="letter-content"></div>
+        <button class="begin-btn letter-next-btn" onclick="goToPhotoMemories()" style="display:none;">
+            Our Photo Memories →
+        </button>
+    </div>
+</div>
+
+
+<!-- ========== PHOTO MEMORIES - CINEMA ROLLS ========== -->
+<div id="photo-memories" style="display: none;">
+    <div class="cinema-bg"></div>
+
+    <h1 class="cinema-title">Our Memories on Film ❤️</h1>
+    <p class="cinema-subtitle">Every frame holds a piece of us</p>
+
+    <div class="film-rolls-container">
+        <!-- Left Roll (scrolls UP) -->
+        <div class="film-roll left-roll">
+            <div class="film-strip" id="left-strip"></div>
+        </div>
+
+        <!-- Right Roll (scrolls DOWN) -->
+        <div class="film-roll right-roll">
+            <div class="film-strip" id="right-strip"></div>
+        </div>
+    </div>
+
+    <!-- Appears only after full cycle -->
+    <div class="memories-end-message" id="memories-end-message">
+        Every memory with you is worth replaying forever ❤️<br>
+        <span>💞Thank you for making my life a beautiful Memory🫂.</span>
+    </div>
+</div>
+
+<!-- ========== BOTTOM NAVIGATION ========== -->
+
+    <script src="script.js"></script>
+</body>
+</html>
